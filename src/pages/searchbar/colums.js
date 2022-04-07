@@ -58,6 +58,14 @@ const columns = [
             </Tag>
          );
       },
+      filters: [
+         { text: 'Alive', value: 'Alive' },
+         { text: 'Dead', value: 'Dead' },
+         { text: 'Unknown', value: 'unknown' },
+      ],
+      onFilter: (value, record) => {
+         return record.status === value;
+      },
    },
    {
       title: 'Gender',
